@@ -1,0 +1,440 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	/*background: transparent;*/
+}
+body {
+	/*line-height: 1;*/
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+a:hover, a:active, a:focus {
+	text-decoration: none
+}
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*-----------处理搜索框覆盖下拉刷新加载进度问题------------*/
+.mui-bar-nav~ .mui-content .mui-pull-top-pocket{
+	top:80px !important;
+}
+.mui-search input[type="search"]{
+	background:#ffffff;
+}
+
+/*
+ * 自定义字体大小
+ */
+.jk-fontsize-10 {
+	font-size: 10px;
+}
+.jk-fontsize-12 {
+	font-size: 12px;
+}
+.jk-fontsize-14 {
+	font-size: 14px;
+}
+.jk-fontsize-16 {
+	font-size: 16px;
+}
+.jk-fontsize-18 {
+	font-size: 18px;
+}
+.jk-fontsize-20 {
+	font-size: 20px;
+}
+.jk-fontsize-24 {
+	font-size: 24px;
+}
+.jk-fontsize-28 {
+	font-size: 28px;
+}
+
+/*
+ * 自定义内填充
+ */
+.jk-width-5 {
+	width: 5% !important;
+}
+
+/*
+ * 自定义外边距
+ */
+.jk-width-5 {
+	width: 5% !important;
+}
+
+
+/*
+ * 自定义百分比宽度
+ */
+.jk-width-5 {
+	width: 5% !important;
+}
+.jk-width-15 {
+	width: 15% !important;
+}
+.jk-width-30 {
+	width: 30% !important;
+}
+.jk-width-45 {
+	width: 45% !important;
+}
+.jk-width-50 {
+	width: 50% !important;
+}
+.jk-width-75 {
+	width: 75% !important;
+}
+.jk-width-80 {
+	width: 80% !important;
+}
+.jk-width-90 {
+	width: 90% !important;
+}
+/*
+ * 自定义角标颜色
+ */
+.jk-badge-green {
+    color: #fff;
+    background-color: rgb(6, 180, 170);
+}
+
+/*
+ * 自定义按钮颜色
+ */
+.jk-button-green {
+    border: 1px solid rgb(6, 180, 170);
+    background-color: rgb(6, 193, 174);
+    color: #fff;
+}
+.jk-button-green-out {
+    border: 1px solid rgb(6, 180, 170);
+ 	background-color: #fff;
+ 	color: rgb(6, 180, 170);
+}
+
+/*
+ * 比mui-btn-block小一点
+ * */
+.jk-button-block {
+	font-size: 16px;
+    padding: 6px 0;
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+/*
+ * 自定义字体颜色
+ */
+.jk-font-blue {
+	color: dodgerblue !important;
+}
+.jk-font-green {
+	color: rgb(6, 193, 174) !important;
+}
+
+/*
+ *九宫格样式 (具体布局参考hello mui里的九宫格)
+ */
+.mui-grid-view.mui-grid-9 li.mui-table-view-cell img {
+	width: 40px;
+	height: 40px;
+}
+
+/*
+ *公共头部样式 
+ */
+/*使用mui公共头部样式(使用字体图标)
+ * <header class = "mui-bar mui-nav-bar">
+ * 	<a class="mui-icon mui-icon-left-nav mui-pull-left"></a>
+ * 	<h1 class="mui-title"></h1>
+ * 	<a class="mui-icon mui-pull-right">
+ * </header>
+ */
+/*背景、字体、图标颜色*/
+.jk-header-normal {
+    background-color: rgb(6, 193, 174);
+}
+.jk-header-normal .mui-title {
+    color: #fff;
+}
+.jk-header-normal .mui-action-back {
+	color: #fff;
+}
+.jk-header-normal .mui-pull-right {
+	color: #fff;
+}
+/*使用图片*/
+.jk-header-normal .jk-icon-image {
+	padding: 10px;
+    margin-right: -10px;
+    margin-left: -10px;
+}
+.jk-header-normal .jk-icon-image img {
+	width: 22px;
+	height: 22px;
+}
+
+/*
+ * 左图片列表页
+ */
+/*向左滑动删除键*/
+.mui-table-view .mui-table-view-cell .mui-slider-right {
+	z-index: 1;
+}
+.jk-list {
+	position: relative;
+    padding-left: 80px;
+    min-height: 72px;
+}
+/*左侧图片*/
+.jk-list .jk-list-img {
+	width:70px !important;
+	height:70px !important;
+	overflow: hidden;
+	margin-right:10px;
+	position: absolute;
+    left: 0;
+    top: 0;
+}
+/*主标题*/
+.jk-list .jk-list-title {
+	color: #666;
+	font-size: 16px;
+	margin-bottom: 7px;
+}
+/*主内容*/
+.jk-list .jk-list-content {
+	color: #777;
+	font-size: 15px;
+	display: block;
+	margin-bottom: 7px;
+}
+/*其他内容*/
+.jk-list .jk-list-desc {
+	color: #999;
+	font-size: 14px;
+	margin-bottom: 5px;
+}
+/*单行内容超出省略*/
+.jk-list .jk-list-ellipsis {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+/*位于.jk-list外部的标记*/
+.mui-table-view .mui-table-view-cell .jk-click-icon {
+    position: absolute;
+    width: 32px;
+    right: 30px;
+    top: 15px;
+}
+/*位于.jk-list内部的标记*/
+.mui-table-view .jk-list .jk-list-mark {
+	position: absolute;
+	right: 0;
+    top: 0;
+}
+/*列表模板样式除了
+ * mui-table-view
+ * 还有mui-table-view-chevron
+ */
+.mui-table-view-chevron .mui-table-view-cell {
+    padding-right: 80px;
+}
+.mui-table-view.mui-table-view-chevron .jk-list .jk-list-mark {
+    right: -69px;
+}
+
+/*
+ * 表单
+ */
+.jk-form {
+	
+}
+/*表单按钮*/
+.jk-form .jk-normal-button {
+    padding: 15px;
+}
+.jk-form .jk-normal-button .mui-btn:last-child {
+	margin-bottom: 0;
+}
+/*表单盒子*/
+.jk-form .jk-form-box {
+    padding: 10px;
+    font-size: 14px;
+    background: #FFFFFF;
+    border: 5px solid #EEEEEE;
+    border-radius: 5px;
+}
+/*清除浮动*/
+.jk-form .jk-form-box li {
+    overflow: hidden;
+}
+/*表单左侧*/
+.jk-form .jk-form-label {
+    line-height: 1.1;
+    float: left;
+    width: 38%;
+    padding: 11px 15px;
+    text-align: justify;
+    text-align: end; /* 对于除了IE之外的浏览器用尾对齐覆盖之前的两端对齐方式 */
+    text-align-last: justify;
+    text-justify: distribute;
+}
+/*星号标志*/
+.jk-form .jk-form-label .strong {
+	color: #DD524D;
+	vertical-align: sub;
+	display: inline-block;
+	width: 5px;
+    margin-right: 5px;
+}
+/*表单右侧*/
+.jk-form  .jk-form-content {
+    float: right;
+    width: 62%;
+}
+/*文本框*/
+.jk-form  .jk-form-content .jk-form-input {
+	height:35px;
+	line-height:35px;
+	text-align: left;
+	vertical-align:middle;
+	padding: 0 5px;
+}
+/*与文本框同在一个容器里的span文字与文本框居中对齐*/
+.jk-form  .jk-form-content .jk-form-input ~ span {
+	vertical-align: super;
+}
+/*多行文本*/
+.jk-form .jk-form-content textarea {
+	height: 75px;
+	text-align: left;
+	vertical-align: middle;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+/*下拉框*/
+.jk-form .jk-form-content .jk-form-select {
+	color:rgb(153, 153, 153);
+	float:right;
+	height:35px;
+	line-height:35px;
+    margin-right: 6px;
+}
+.jk-form .jk-form-content .jk-form-select:after {
+	right: 0.05rem;
+	top: 50%;
+	display: inline-block;
+	content: "";
+	width: 0.6em;
+	height: 0.6em;
+	border-left: 0.02rem solid #AAAAAA;
+	border-bottom: 0.02rem solid #AAAAAA;
+	transform: translateY(0%) scaleY(0.7) rotateZ(-135deg);
+}
+/*单选框*/
+.jk-form .jk-form-content label.mui-radio {
+	float: right;
+	margin-left: 5px;
+}
+.jk-form .jk-form-content label.mui-radio input[type='radio'] {
+	position:  static;
+}
+.jk-form .jk-form-content label.mui-radio input[type='radio'] ~ span {
+	vertical-align: text-bottom;
+	margin-left: 3px;
+}
+/*单选框颜色*/
+.mui-checkbox input[type=checkbox]:checked:before, .mui-radio input[type=radio]:checked:before {
+    color: rgb(6, 193, 174);
+}
+/*图片放大*/
+.back_bg{
+	display: none;
+	background: #000;
+	position: fixed;
+	top: 0px;
+	width: 100%;
+	max-width: 750px;
+	height: 100%;
+	z-index: 99;
+}
+
+/*
+ * 弹出层宽度
+ */
+.mui-popover {
+	width: 128px;
+}
+
+/*
+ * 表格
+ */
+.jk-table {
+	background: #fff;
+	overflow-x: auto;
+}
+.jk-table table {
+    white-space: nowrap;
+    width: 100%;
+}
+.jk-table table th, .jk-table table td {
+	padding: 8px;
+	text-align: center;
+}
+.jk-table table thead {
+	border-bottom: 1px solid #ccc;
+}
+.jk-table table thead tr th {
+	font-size: 16px;
+	font-weight: normal;
+	color: #333;
+}
+.jk-table table tbody tr td {
+	font-size: 14px;
+	color: #666;
+}
+.jk-table table tbody tr:nth-child(even) {
+	background-color: #eee;
+}

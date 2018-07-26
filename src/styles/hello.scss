@@ -1,0 +1,37 @@
+.content {
+    padding: 10px;
+}
+@mixin success-bg {
+    background-color: $green;
+    color: $white;
+}
+@mixin success-light-bg {
+    background-color: $lightgreen;
+    color: $black;
+}
+.btn-primary {
+    display: inline-block;
+    padding: 4px 10px;
+    cursor: pointer
+}
+button {
+    @include success-bg;
+    outline: none;
+    border: none;
+    padding: 4px 10px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+p.block {
+  font: 10px/8px;             // 纯 CSS，不是除法运算
+  $width: 1000px;
+  width: $width/2;            // 使用了变量，是除法运算
+  width: round(1.5)/2;        // 使用了函数，是除法运算
+  height: (500px/2);          // 使用了圆括号，是除法运算
+  margin-left: 5px + 8px/2px; // 使用了加（+）号，是除法运算
+}
+h1 {
+    font-size: $lfonts;
+    padding: 6px 4px;
+    color: $red;
+}

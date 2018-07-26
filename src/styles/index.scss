@@ -1,0 +1,111 @@
+$red: #f38181;
+$yellow: #fce38a;
+$lightgreen: #eaffd0;
+$green: #95e1d3;
+$lightgray: #eeeeee;
+$gray: #cccccc;
+$black: #333333;
+$white: #ffffff;
+$mfonts: 12px;
+$nfonts: 16px;
+$lfonts: 20px;
+
+body {
+    color: $black;
+    font:{
+        size: $nfonts;
+        family: "微软雅黑";   
+    }
+    header,footer {
+        position: fixed;
+        text-align: center;
+        line-height: 80px;
+        font-size: $lfonts;
+        color: $white;
+        width: 100%;
+    }
+    header {
+        top: 0;
+        background-color: $red;
+    }
+    footer {
+        bottom: 0;
+        background-color: $green;
+    }
+    aside {
+        background-color: $lightgreen;
+        position: fixed;
+        top: 80px;
+        left: 0;
+        bottom: 80px;
+        width: 20vw;
+        padding: 20px 0;
+        box-sizing: border-box;
+        font-size: $lfonts;
+        color: $black;
+        text-align: center;
+    }
+    section.container {
+        position: fixed;
+        top: 80px;
+        bottom: 80px;
+        left: 20vw;
+        right: 0;
+        background-color: $yellow;
+        color: $black;
+        padding: 20px;
+        overflow-y: auto;
+    }
+}
+
+@import './hello.scss';
+
+.fade-enter-active {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+}
+.fade-leave-active {
+    -webkit-animation-name: fadeOut;
+    animation-name: fadeOut;
+}
+.animated {
+    -webkit-animation-duration: 300ms;
+    animation-duration: 300ms;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both
+}
+@-webkit-keyframes fadeOut {
+    0% {
+        opacity: 1
+    }
+    100% {
+        opacity: 0
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1
+    }
+    100% {
+        opacity: 0
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
