@@ -29,7 +29,7 @@ export default {
 	      list:[],
 	      sendData: {
 	      	'code':'utf-8',
-	      	'q':"耳机"
+	      	'q':"耳机 耳塞式 蓝牙"
 	      }
 	    }
   	},
@@ -43,7 +43,6 @@ export default {
 	          	message: '获取数据成功',
 	          	type: 'success'
 	        })
-			console.log(response)
 			this.list = response.result || response.list;
 		})
 		.catch((error)=>{

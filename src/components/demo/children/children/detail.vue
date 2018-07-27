@@ -1,9 +1,11 @@
 <template>
 	<div class="detail">
 		<h1>{{msg}}~~~{{this.$route.params.userId}}</h1>
-		<button>
-			<router-link to="/hello" replace>back</router-link>
-		</button>
+		<router-link to="/hello">
+			<el-button type="danger">
+				back
+			</el-button>
+		</router-link>
 	</div>
 </template>
 

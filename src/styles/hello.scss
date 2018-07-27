@@ -9,19 +9,19 @@
     background-color: $lightgreen;
     color: $black;
 }
-.btn-primary {
-    display: inline-block;
-    padding: 4px 10px;
-    cursor: pointer
-}
-button {
-    @include success-bg;
-    outline: none;
-    border: none;
-    padding: 4px 10px;
-    cursor: pointer;
-    border-radius: 8px;
-}
+//.btn-primary {
+//  display: inline-block;
+//  padding: 4px 10px;
+//  cursor: pointer
+//}
+//button {
+//  @include success-bg;
+//  outline: none;
+//  border: none;
+//  padding: 4px 10px;
+//  cursor: pointer;
+//  border-radius: 8px;
+//}
 p.block {
   font: 10px/8px;             // 纯 CSS，不是除法运算
   $width: 1000px;

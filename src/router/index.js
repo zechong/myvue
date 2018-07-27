@@ -17,10 +17,21 @@ export default new Router({
 			path: '/',
 			redirect: '/hello'
 		},
+		{
+			path: '/login',
+			name: 'login',
+			component: (resolve) => {
+		  	require(['@/components/login'], resolve)
+		  }
+		},
     {
       path: '/hello',
       name: 'hello',
       component: home,
+      meta: {
+		  	requireAuth: true,
+		  	keepAlive: true
+		  },
       children:[
 	      {
 	      	path: 'list',
@@ -48,7 +59,10 @@ export default new Router({
     {
       path: '/demo',
       name: 'Demo',
-      component: Demo
+      component: Demo,
+   		meta: {
+		  	keepAlive: false
+		  },
     },
     {
       path: '/test',

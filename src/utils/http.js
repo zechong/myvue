@@ -1,10 +1,10 @@
 import axios from 'axios';
-import { Message } from 'element-ui';
+import { Loading,Message } from 'element-ui';
 
 axios.defaults.timeout = 5000;
 axios.defaults.baseURL ='';
 
-
+var loadinginstace;
 //http request 拦截器
 axios.interceptors.request.use(
   config => {
@@ -16,9 +16,14 @@ axios.interceptors.request.use(
     // if(token){
     //   config.params = {'token':token}
     // }
+    loadinginstace = Loading.service({ fullscreen: true })
     return config;
   },
   error => {
+  	loadinginstace.close()
+	 	Message.error({
+	 		message: '加载超时'
+	 	})
     return Promise.reject(err);
   }
 );
@@ -27,6 +32,7 @@ axios.interceptors.request.use(
 //http response 拦截器
 axios.interceptors.response.use(
   response => {
+  	loadinginstace.close()
     if(response.data.errCode ==2){
       router.push({
         path:"/login",
@@ -36,6 +42,10 @@ axios.interceptors.response.use(
     return response;
   },
   error => {
+  	loadinginstace.close()
+		Message.error({
+		 	message: '加载失败'
+	 	})
     return Promise.reject(error)
   }
 )
