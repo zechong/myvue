@@ -1,7 +1,8 @@
 <template>
   <div class="login">
   	<el-row :gutter="20">
-			<el-col :span="8" :offset="8">
+  		<el-col :md="8" :sm="4" :xs="2">&nbsp;</el-col>
+			<el-col :md="8" :sm="16" :xs="20" >
 				<el-card class="box-card">
 					<el-form :model="login" status-icon :rules="rules" ref="form" v-loading="loading"  element-loading-text="正在登录...">
 					  <el-form-item>
@@ -19,11 +20,12 @@
 					    <el-switch v-model="login.auto" @click="this.login.auto == !this.login.auto"></el-switch>
 					  </el-form-item>-->
 					  <el-form-item class="tc">
-				    	<el-button type="primary" @click="submitForm('form')" class="w100">立即登录</el-button>
+				    	<el-button type="primary" style="width: 100%;"  @click="submitForm('form')" class="w100">立即登录</el-button>
 					  </el-form-item>
 					</el-form>
 				</el-card>
 			</el-col>
+  		<el-col :md="8" :sm="4" :xs="2">&nbsp;</el-col>
 		</el-row>
   </div>
 </template>
@@ -118,7 +120,7 @@ export default {
 		background: #efefef url(../assets/images/bg.png) no-repeat center bottom;
 	}
 	.login {
-		padding: 158px 20px;
+		padding: 183px 20px;
 	}
 	.tc {
 		text-align: center;

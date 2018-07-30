@@ -19,10 +19,18 @@ body {
     header,footer {
         position: fixed;
         text-align: center;
-        line-height: 80px;
+        height: 80px;
+        display: table;
+        padding: 0 10px;
         font-size: $lfonts;
         color: $white;
         width: 100%;
+        box-sizing: border-box;
+        span{
+            display: table-cell;
+            vertical-align: middle;
+            word-break: break-all;
+        }
     }
     header {
         top: 0;

@@ -1,13 +1,14 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Demo from '@/components/Demo'
-import Test from '@/components/Test'
-import Cart from '@/components/Cart'
-import a from '@/components/a'
-import Vueform from '@/components/Vueform'
-import Vuecheck from '@/components/Vuecheck'
+import Demo from '@/views/Demo'
+import Test from '@/views/Test'
+import Cart from '@/views/Cart'
+import a from '@/views/a'
+import Vueform from '@/views/Vueform'
+import Vuecheck from '@/views/Vuecheck'
 
-const home = r => require.ensure( [], () => r (require('@/components/demo/hello')))
+const home = r => require.ensure( [], () => r (require('@/views/demo/hello')))
+const list = r => require.ensure( [], () => r (require('@/views/demo/children/list')),'list')
 
 Vue.use(Router)
 
@@ -21,7 +22,7 @@ export default new Router({
 			path: '/login',
 			name: 'login',
 			component: (resolve) => {
-		  	require(['@/components/login'], resolve)
+		  	require(['@/views/login'], resolve)
 		  }
 		},
     {
@@ -36,20 +37,23 @@ export default new Router({
 	      {
 	      	path: 'list',
 	      	name: "list",
-      		component: () => import('@/components/demo/children/list'),
+      		component: list,
+      		meta: {
+				  	keepAlive: true
+				  },
       		children:[
 			      {
 			      	path: 'detail/:userId',
 			      	name: "detail",
 			      	components: {
-				       	default: () => import('@/components/demo/children/children/detail'),
+				       	default: () => import('@/views/demo/children/children/detail'),
 				        a:  {template: '<div>User {{ this.$route.params.userId }}</div>'}
 				      },
 				      beforeEnter: (to, from, next) => {
 				      	next()
 //				      	console.log("this is a " + to.name )
 				      }
-//		      		component: () => import('@/components/demo/children/children/detail')
+//		      		component: () => import('@/views/demo/children/children/detail')
 //							component: {template: '<div>User {{ this.$route.params.userId }}</div>'}
 			      }
 			    ]
@@ -60,9 +64,6 @@ export default new Router({
       path: '/demo',
       name: 'Demo',
       component: Demo,
-   		meta: {
-		  	keepAlive: false
-		  },
     },
     {
       path: '/test',
@@ -91,7 +92,7 @@ export default new Router({
     },{
 			path: '/error',
 			name: "error",
-			component: () => import('@/components/error'),
+			component: () => import('@/views/error'),
 		},{
 			path: '*',
 			redirect: '/error'
