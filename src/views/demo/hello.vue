@@ -7,7 +7,9 @@
   		<el-button type="success" @click="logout()">exit</el-button>
   	</aside>
   	<section class="container">
-  		<in-form :age="ageNum" @clearText="num=''" @input="onInput"></in-form>
+  		<in-form :age="ageNum" @clearText="num=''" @input="onInput">
+  			<span slot="desc">Here might be a page title</span>
+  		</in-form>
   		<p style="margin-bottom: 5px;">您选择的年龄是：{{num}}</p>
   		<el-input v-model="inputText" placeholder="请输入内容" style="margin-bottom: 5px;"></el-input>
   		<router-link :to="{ name: 'Demo'}"><el-button type="primary">godemo</el-button></router-link>
@@ -69,11 +71,11 @@ export default {
 				}}
 			);
     },
-    onInput: function(val) {
+    onInput (val) {
     	this.num = val;
    	}
   },
-  mounted: function(){
+  mounted (){
   	this.num = this.ageNum;
   }
 }

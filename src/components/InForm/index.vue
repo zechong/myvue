@@ -9,6 +9,7 @@
 		<el-form-item>
 			<el-button type="primary" @click="submitForm('numberValidateForm')">提交</el-button>
 			<el-button @click="resetForm('numberValidateForm')">重置</el-button>
+			<slot name="desc">123</slot>
 		</el-form-item>
 	</el-form>
 </template>

@@ -4,7 +4,10 @@
 		<ul>
 			<template v-for="item in list">
 				<li v-show="item.id != 1">
-					<router-link :to="{ name: 'detail', params: { userId: item[1]||item.id }}">{{item[0] || item.title}} >></router-link>
+					<router-link :to="{ name: 'detail', params: { userId: item[1]||item.id }}">
+						<img :src="item.src" />
+						<span>{{item[0] || item.title}} >></span>
+					</router-link>
 				</li>
 			</template>
 		</ul>
@@ -35,9 +38,10 @@ export default {
   	},
   	created: function(){
   		var _this = this;
-		this.$fetch( process.env.API_HOST +'sug',this.sendData)
-//		this.$post('/mock/list')
+//		this.$fetch( process.env.API_HOST +'sug',this.sendData)
+		this.$post('/mock/list')
 		.then((response)=>{
+			console.log(response)
 			Message({
 	          	showClose: true,
 	          	message: '获取数据成功',
